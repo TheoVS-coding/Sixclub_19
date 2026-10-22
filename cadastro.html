@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar conta — SixClub</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body">
+
+  <div class="auth-topbar">
+    <a href="index.html"><img src="img/logopreta.jpeg" alt="SixClub"></a>
+    <a href="index.html" class="btn btn-outline"><i class="bx bx-arrow-back"></i> Voltar à loja</a>
+  </div>
+
+  <main class="auth-wrapper">
+    <div class="auth-card auth-card--wide">
+      <h1>Criar conta</h1>
+      <p class="auth-card__subtitulo">Leva menos de dois minutos</p>
+
+      <form id="form-cadastro" novalidate>
+        <div class="campo">
+          <label for="cad-nome">Nome completo <span class="obrigatorio">*</span></label>
+          <input type="text" id="cad-nome" required placeholder="Digite o nome completo">
+          <p class="campo__erro" role="alert"></p>
+        </div>
+
+        <div class="linha-dupla">
+          <div class="campo">
+            <label for="cad-cpf">CPF <span class="obrigatorio">*</span></label>
+            <input type="text" id="cad-cpf" required placeholder="000.000.000-00" inputmode="numeric">
+            <p class="campo__erro" role="alert"></p>
+          </div>
+          <div class="campo">
+            <label for="cad-rg">RG</label>
+            <input type="text" id="cad-rg" placeholder="00.000.000-0">
+          </div>
+        </div>
+
+        <div class="linha-dupla">
+          <div class="campo">
+            <label for="cad-telefone">Telefone <span class="obrigatorio">*</span></label>
+            <input type="tel" id="cad-telefone" required placeholder="(00) 00000-0000" inputmode="numeric">
+            <p class="campo__erro" role="alert"></p>
+          </div>
+          <div class="campo">
+            <label for="cad-email">E-mail <span class="obrigatorio">*</span></label>
+            <input type="email" id="cad-email" required placeholder="seuemail@exemplo.com">
+            <p class="campo__erro" role="alert"></p>
+          </div>
+        </div>
+
+        <div class="linha-dupla">
+          <div class="campo">
+            <label for="cad-senha">Senha <span class="obrigatorio">*</span></label>
+            <input type="password" id="cad-senha" required placeholder="Mínimo de 6 caracteres" autocomplete="new-password">
+            <div class="forca-senha"><div class="forca-senha__barra"></div></div>
+            <p class="campo__erro" role="alert"></p>
+          </div>
+          <div class="campo">
+            <label for="cad-senha-confirma">Confirmar senha <span class="obrigatorio">*</span></label>
+            <input type="password" id="cad-senha-confirma" required autocomplete="new-password">
+            <p class="campo__erro" role="alert"></p>
+          </div>
+        </div>
+
+        <hr class="auth-card__separador">
+
+        <div class="campo">
+          <label for="cad-cep">CEP <span class="obrigatorio">*</span></label>
+          <input type="text" id="cad-cep" required placeholder="00000-000" inputmode="numeric">
+          <p class="campo__erro" role="alert"></p>
+        </div>
+
+        <div class="campo">
+          <label for="cad-logradouro">Logradouro (Rua/Avenida) <span class="obrigatorio">*</span></label>
+          <input type="text" id="cad-logradouro" required placeholder="Nome da rua, avenida, etc.">
+          <p class="campo__erro" role="alert"></p>
+        </div>
+
+        <div class="linha-dupla">
+          <div class="campo">
+            <label for="cad-numero">Número <span class="obrigatorio">*</span></label>
+            <input type="text" id="cad-numero" required placeholder="Nº">
+            <p class="campo__erro" role="alert"></p>
+          </div>
+          <div class="campo">
+            <label for="cad-complemento">Complemento</label>
+            <input type="text" id="cad-complemento" placeholder="Apto, Bloco, Casa">
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="cad-bairro">Bairro <span class="obrigatorio">*</span></label>
+          <input type="text" id="cad-bairro" required placeholder="Nome do bairro">
+          <p class="campo__erro" role="alert"></p>
+        </div>
+
+        <div class="linha-dupla">
+          <div class="campo">
+            <label for="cad-cidade">Cidade <span class="obrigatorio">*</span></label>
+            <input type="text" id="cad-cidade" required placeholder="Nome da cidade">
+            <p class="campo__erro" role="alert"></p>
+          </div>
+          <div class="campo">
+            <label for="cad-estado">Estado <span class="obrigatorio">*</span></label>
+            <select id="cad-estado" required>
+              <option value="">Selecione</option>
+              <option>SP</option>
+              <option>RJ</option>
+              <option>MG</option>
+              <option>PR</option>
+              <option>RS</option>
+              <option>SC</option>
+              <option>BA</option>
+              <option>Outro</option>
+            </select>
+            <p class="campo__erro" role="alert"></p>
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="cad-residencia">Tipo de residência <span class="obrigatorio">*</span></label>
+          <select id="cad-residencia" required>
+            <option value="">Selecione</option>
+            <option>Casa</option>
+            <option>Apartamento</option>
+            <option>Outro</option>
+          </select>
+          <p class="campo__erro" role="alert"></p>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          <span class="js-texto-botao">Criar conta</span>
+        </button>
+
+        <div class="auth-card__acoes">
+          <a href="login.html" class="auth-card__link">Já tenho conta, quero entrar</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/cadastro.js"></script>
+</body>
+</html>

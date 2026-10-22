@@ -1,0 +1,55 @@
+/* ==========================================================================
+   SixClub — Design Tokens
+   Paleta, tipografia, espaçamentos e demais variáveis globais do projeto.
+   ========================================================================== */
+
+:root {
+  /* Cores de marca */
+  --color-primary: #ff6a00;
+  --color-primary-dark: #e35e00;
+  --color-primary-light: #ff8a3d;
+  --color-ink: #111111;
+  --color-ink-soft: #3a3a3a;
+  --color-muted: #6b6b6b;
+  --color-border: #e6e6e6;
+  --color-surface: #ffffff;
+  --color-bg: #f6f6f7;
+
+  /* Feedback */
+  --color-success: #1e8e3e;
+  --color-success-bg: #e9f7ee;
+  --color-error: #d93025;
+  --color-error-bg: #fdecea;
+  --color-warning: #b8860b;
+
+  /* Tipografia */
+  --font-display: "Poppins", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+
+  /* Espaçamentos */
+  --space-1: 0.4rem;
+  --space-2: 0.8rem;
+  --space-3: 1.2rem;
+  --space-4: 1.6rem;
+  --space-5: 2.4rem;
+  --space-6: 3.2rem;
+  --space-7: 4.8rem;
+
+  /* Raios e sombras */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 2px 8px rgba(17, 17, 17, 0.08);
+  --shadow-md: 0 8px 24px rgba(17, 17, 17, 0.12);
+  --shadow-lg: 0 16px 40px rgba(17, 17, 17, 0.18);
+
+  /* Layout */
+  --header-height: 78px;
+  --container-max: 1280px;
+
+  /* Transições */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 0.18s var(--ease);
+  --transition-base: 0.3s var(--ease);
+}

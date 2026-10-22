@@ -1,0 +1,142 @@
+/* ==========================================================================
+   SixClub — Login e Cadastro
+   ========================================================================== */
+
+body.auth-body {
+  background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-bg) 55%);
+  min-height: 100vh;
+}
+
+.auth-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+}
+
+.auth-topbar img { height: 42px; }
+
+.auth-topbar .btn { padding: 1rem 2rem; }
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-4) var(--space-4) var(--space-7);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-5);
+}
+
+.auth-card--wide { max-width: 640px; }
+
+.auth-card h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: var(--space-1);
+}
+
+.auth-card__subtitulo {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 1.4rem;
+  margin-bottom: var(--space-4);
+}
+
+.campo {
+  margin-bottom: var(--space-3);
+}
+
+.campo label {
+  display: block;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: var(--space-1);
+  color: var(--color-ink-soft);
+}
+
+.campo .obrigatorio { color: var(--color-error); }
+
+.campo input,
+.campo select {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.15);
+}
+
+.campo.campo--erro input,
+.campo.campo--erro select {
+  border-color: var(--color-error);
+}
+
+.campo__erro {
+  display: none;
+  color: var(--color-error);
+  font-size: 1.25rem;
+  margin-top: 0.4rem;
+}
+
+.campo.campo--erro .campo__erro { display: block; }
+
+.linha-dupla {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.linha-dupla .campo { flex: 1; }
+
+.auth-card__acoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.auth-card__link {
+  font-size: 1.4rem;
+  color: var(--color-primary);
+}
+
+.auth-card__link:hover { text-decoration: underline; }
+
+.auth-card__separador {
+  width: 100%;
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-3) 0;
+}
+
+/* Indicador simples de força de senha */
+.forca-senha {
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: var(--color-border);
+  margin-top: var(--space-1);
+  overflow: hidden;
+}
+
+.forca-senha__barra {
+  height: 100%;
+  width: 0%;
+  background: var(--color-error);
+  transition: width var(--transition-base), background var(--transition-base);
+}
+
+@media (max-width: 480px) {
+  .auth-card { padding: var(--space-4); }
+  .linha-dupla { flex-direction: column; gap: 0; }
+}

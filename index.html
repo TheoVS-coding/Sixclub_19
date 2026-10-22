@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SixClub — Sua loja de tênis</title>
+  <meta name="description" content="SixClub: tênis Nike, Adidas, Puma, Mizuno, Olympikus e New Balance com os melhores preços.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo">
+        <img src="img/logopreta.jpeg" width="150" height="58" alt="SixClub">
+      </a>
+
+      <button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <i class="bx bx-menu"></i>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="produtos.html?categoria=corrida">Corrida</a>
+        <a href="produtos.html?categoria=casual">Casual</a>
+        <a href="produtos.html?categoria=lifestyle">Lifestyle</a>
+      </nav>
+
+      <form class="site-header__search" role="search">
+        <label class="sr-only" for="busca-header">Buscar produtos</label>
+        <i class="bx bx-search" aria-hidden="true"></i>
+        <input type="search" id="busca-header" placeholder="Buscar tênis...">
+      </form>
+
+      <div class="site-header__actions">
+        <a class="icon-btn" href="produtos.html?favoritos=1" aria-label="Ver favoritos">
+          <i class="bx bx-heart"></i>
+        </a>
+        <button type="button" class="icon-btn" data-abrir-carrinho aria-label="Abrir carrinho de compras">
+          <i class="bx bx-cart"></i>
+          <span class="badge js-badge-carrinho">0</span>
+        </button>
+        <a class="icon-btn" href="login.html" aria-label="Entrar na minha conta">
+          <i class="bx bx-user"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Destaques promocionais">
+      <div class="container">
+        <div class="hero-carousel">
+          <div class="hero-carousel__track">
+            <div class="hero-carousel__slide"><img src="img/banners/banner1.jpeg" alt="Promoção SixClub 1" loading="eager"></div>
+            <div class="hero-carousel__slide"><img src="img/banners/banner2.jpeg" alt="Promoção SixClub 2" loading="lazy"></div>
+            <div class="hero-carousel__slide"><img src="img/banners/banner3.jpeg" alt="Promoção SixClub 3" loading="lazy"></div>
+          </div>
+          <button type="button" class="hero-carousel__arrow hero-carousel__arrow--prev" aria-label="Slide anterior">
+            <i class="bx bx-chevron-left"></i>
+          </button>
+          <button type="button" class="hero-carousel__arrow hero-carousel__arrow--next" aria-label="Próximo slide">
+            <i class="bx bx-chevron-right"></i>
+          </button>
+          <div class="hero-carousel__dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section categorias" aria-labelledby="titulo-categorias">
+      <div class="container">
+        <h2 class="section-title" id="titulo-categorias">Categorias</h2>
+        <div class="categorias__grid">
+          <a class="categoria-card" href="produtos.html?categoria=corrida">
+            <img src="img/produtos/tenis_37.png" alt="" aria-hidden="true">
+            <h3>Corrida</h3>
+          </a>
+          <a class="categoria-card" href="produtos.html?categoria=casual">
+            <img src="img/produtos/tenis_7.png" alt="" aria-hidden="true">
+            <h3>Casual</h3>
+          </a>
+          <a class="categoria-card" href="produtos.html?categoria=lifestyle">
+            <img src="img/produtos/tenis_17.png" alt="" aria-hidden="true">
+            <h3>Lifestyle</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-destaques">
+      <div class="container">
+        <h2 class="section-title" id="titulo-destaques">Produtos em destaque</h2>
+        <div class="produtos-grid js-produtos-destaque" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Benefícios da loja">
+      <div class="container beneficios">
+        <p class="beneficio"><i class="bx bx-truck"></i> Entrega para todo o Brasil</p>
+        <p class="beneficio"><i class="bx bx-credit-card"></i> Em até 12x no cartão</p>
+        <p class="beneficio"><i class="bx bx-refresh"></i> Troca grátis em 30 dias</p>
+        <p class="beneficio"><i class="bx bx-shield-quarter"></i> Compra 100% segura</p>
+      </div>
+    </section>
+
+    <section class="section section--cta">
+      <div class="container">
+        <a href="produtos.html" class="btn btn-primary">Ver todos os produtos</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="img/logopreta.jpeg" width="120" height="46" alt="SixClub">
+          <p>A SixClub reúne os principais nomes do calçado esportivo em um só lugar, com preço justo e entrega para todo o país.</p>
+        </div>
+        <div>
+          <h4>Ajuda</h4>
+          <ul>
+            <li>Dúvidas gerais</li>
+            <li>Entregas</li>
+            <li>Pedidos</li>
+            <li>Devoluções</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Sobre a SixClub</h4>
+          <ul>
+            <li>Propósito</li>
+            <li>Sustentabilidade</li>
+            <li>SixClub, Inc.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Minha conta</h4>
+          <ul>
+            <li><a href="login.html">Entrar</a></li>
+            <li><a href="produtos.html">Meus produtos</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="site-footer__bottom">© 2026 SixClub — Projeto acadêmico.</p>
+    </div>
+  </footer>
+
+  <!-- Drawer do carrinho, compartilhado em todas as páginas -->
+  <div class="overlay"></div>
+  <aside class="cart-drawer" aria-hidden="true" aria-label="Carrinho de compras">
+    <div class="cart-drawer__header">
+      <h2>Seu carrinho</h2>
+      <button type="button" class="cart-drawer__close" aria-label="Fechar carrinho"><i class="bx bx-x"></i></button>
+    </div>
+    <div class="cart-drawer__items"></div>
+    <div class="cart-drawer__footer">
+      <div class="cart-drawer__total">
+        <span>Total</span>
+        <span class="js-carrinho-total">R$ 0,00</span>
+      </div>
+      <button type="button" class="btn btn-primary btn-block js-finalizar-compra">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

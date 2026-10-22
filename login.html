@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar — SixClub</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-body">
+
+  <div class="auth-topbar">
+    <a href="index.html"><img src="img/logopreta.jpeg" alt="SixClub"></a>
+    <a href="index.html" class="btn btn-outline"><i class="bx bx-arrow-back"></i> Voltar à loja</a>
+  </div>
+
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      <h1>Bem-vindo de volta</h1>
+      <p class="auth-card__subtitulo">Entre com sua conta SixClub</p>
+
+      <form id="form-login" novalidate>
+        <div class="campo">
+          <label for="login-identificador">E-mail ou telefone <span class="obrigatorio">*</span></label>
+          <input type="text" id="login-identificador" autocomplete="username" required>
+          <p class="campo__erro" role="alert"></p>
+        </div>
+
+        <div class="campo">
+          <label for="login-senha">Senha <span class="obrigatorio">*</span></label>
+          <input type="password" id="login-senha" autocomplete="current-password" required>
+          <p class="campo__erro" role="alert"></p>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">
+          <span class="js-texto-botao">Entrar</span>
+        </button>
+
+        <div class="auth-card__acoes">
+          <a href="#" class="auth-card__link js-esqueci-senha">Esqueceu a senha?</a>
+          <hr class="auth-card__separador">
+          <a href="cadastro.html" class="auth-card__link">Ainda não tem conta? Criar conta</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

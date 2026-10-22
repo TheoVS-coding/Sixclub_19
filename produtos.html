@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos — SixClub</title>
+  <meta name="description" content="Catálogo completo de tênis SixClub com busca, filtros por marca, categoria e preço.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/produtos.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="site-header__logo">
+        <img src="img/logopreta.jpeg" width="150" height="58" alt="SixClub">
+      </a>
+
+      <button type="button" class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+        <i class="bx bx-menu"></i>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+        <a href="index.html">Home</a>
+        <a href="produtos.html" aria-current="page">Produtos</a>
+        <a href="produtos.html?categoria=corrida">Corrida</a>
+        <a href="produtos.html?categoria=casual">Casual</a>
+        <a href="produtos.html?categoria=lifestyle">Lifestyle</a>
+      </nav>
+
+      <form class="site-header__search" role="search">
+        <label class="sr-only" for="busca-header">Buscar produtos</label>
+        <i class="bx bx-search" aria-hidden="true"></i>
+        <input type="search" id="busca-header" placeholder="Buscar tênis...">
+      </form>
+
+      <div class="site-header__actions">
+        <a class="icon-btn" href="produtos.html?favoritos=1" aria-label="Ver favoritos">
+          <i class="bx bx-heart"></i>
+        </a>
+        <button type="button" class="icon-btn" data-abrir-carrinho aria-label="Abrir carrinho de compras">
+          <i class="bx bx-cart"></i>
+          <span class="badge js-badge-carrinho">0</span>
+        </button>
+        <a class="icon-btn" href="login.html" aria-label="Entrar na minha conta">
+          <i class="bx bx-user"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="catalogo">
+    <div class="container">
+      <div class="catalogo__layout">
+
+        <aside class="filtros" aria-label="Filtros de produtos">
+          <div class="filtros__grupo">
+            <p class="filtros__titulo">Categoria</p>
+            <label class="filtros__opcao"><input type="checkbox" value="corrida" data-filtro-categoria> Corrida</label>
+            <label class="filtros__opcao"><input type="checkbox" value="casual" data-filtro-categoria> Casual</label>
+            <label class="filtros__opcao"><input type="checkbox" value="lifestyle" data-filtro-categoria> Lifestyle</label>
+          </div>
+
+          <div class="filtros__grupo">
+            <p class="filtros__titulo">Marca</p>
+            <label class="filtros__opcao"><input type="checkbox" value="nike" data-filtro-marca> Nike</label>
+            <label class="filtros__opcao"><input type="checkbox" value="adidas" data-filtro-marca> Adidas</label>
+            <label class="filtros__opcao"><input type="checkbox" value="puma" data-filtro-marca> Puma</label>
+            <label class="filtros__opcao"><input type="checkbox" value="mizuno" data-filtro-marca> Mizuno</label>
+            <label class="filtros__opcao"><input type="checkbox" value="olympikus" data-filtro-marca> Olympikus</label>
+            <label class="filtros__opcao"><input type="checkbox" value="newbalance" data-filtro-marca> New Balance</label>
+          </div>
+
+          <div class="filtros__grupo">
+            <p class="filtros__titulo">Preço até <span class="js-preco-valor"></span></p>
+            <div class="filtros__preco">
+              <input type="range" id="filtro-preco" min="150" max="1600" step="50" value="1600" aria-label="Preço máximo">
+            </div>
+          </div>
+
+          <div class="filtros__grupo">
+            <label class="filtros__opcao"><input type="checkbox" id="filtro-favoritos"> Somente favoritos</label>
+          </div>
+
+          <a href="#" class="filtros__limpar">Limpar filtros</a>
+        </aside>
+
+        <div class="catalogo__conteudo">
+          <div class="catalogo__toolbar">
+            <button type="button" class="filtros-toggle"><i class="bx bx-slider-alt"></i> Filtros</button>
+            <p class="catalogo__resultado" aria-live="polite">Carregando...</p>
+            <div class="catalogo__ordenacao">
+              <label class="sr-only" for="ordenacao">Ordenar por</label>
+              <select id="ordenacao">
+                <option value="relevancia">Relevância</option>
+                <option value="preco-asc">Menor preço</option>
+                <option value="preco-desc">Maior preço</option>
+                <option value="nome-asc">Nome (A-Z)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="catalogo__grid" aria-live="polite"></div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <img src="img/logopreta.jpeg" width="120" height="46" alt="SixClub">
+          <p>A SixClub reúne os principais nomes do calçado esportivo em um só lugar, com preço justo e entrega para todo o país.</p>
+        </div>
+        <div>
+          <h4>Ajuda</h4>
+          <ul>
+            <li>Dúvidas gerais</li>
+            <li>Entregas</li>
+            <li>Pedidos</li>
+            <li>Devoluções</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Sobre a SixClub</h4>
+          <ul>
+            <li>Propósito</li>
+            <li>Sustentabilidade</li>
+            <li>SixClub, Inc.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Minha conta</h4>
+          <ul>
+            <li><a href="login.html">Entrar</a></li>
+            <li><a href="produtos.html">Meus produtos</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="site-footer__bottom">© 2026 SixClub — Projeto acadêmico.</p>
+    </div>
+  </footer>
+
+  <div class="overlay"></div>
+  <aside class="cart-drawer" aria-hidden="true" aria-label="Carrinho de compras">
+    <div class="cart-drawer__header">
+      <h2>Seu carrinho</h2>
+      <button type="button" class="cart-drawer__close" aria-label="Fechar carrinho"><i class="bx bx-x"></i></button>
+    </div>
+    <div class="cart-drawer__items"></div>
+    <div class="cart-drawer__footer">
+      <div class="cart-drawer__total">
+        <span>Total</span>
+        <span class="js-carrinho-total">R$ 0,00</span>
+      </div>
+      <button type="button" class="btn btn-primary btn-block js-finalizar-compra">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/produtos.js"></script>
+</body>
+</html>
